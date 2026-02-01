@@ -16,7 +16,7 @@ const socialLinks = [
     displayName: "Let's Connect",
     subText: "on LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/shayan-ashraf-314b191b2/", // <-- apna LinkedIn link daalo
+    url: "https://www.linkedin.com/in/shayan-ashraf-314b191b2/", // LinkedIn link daalo
     color: "#0A66C2",
     gradient: "from-[#0A66C2] to-[#0077B5]",
     isPrimary: true,
@@ -24,16 +24,16 @@ const socialLinks = [
   {
     name: "Instagram",
     displayName: "Instagram",
-    subText: "@shayanashraf", // <-- apna Insta username
+    subText: "@shayanashraf", // Insta username
     icon: Instagram,
-    url: "https://www.instagram.com/shayanashraf", // <-- Insta profile link
+    url: "https://www.instagram.com/shayan_ashraf_07", // <-- Insta profile link
     color: "#E4405F",
     gradient: "from-[#833AB4] via-[#E4405F] to-[#FCAF45]",
   },
   {
     name: "YouTube",
     displayName: "Youtube",
-    subText: "@", // <-- YT channel username
+    subText: "ShayanAsh", // <-- YT channel username
     icon: Youtube,
     url: "https://youtube.com/@shayanashraf", // <-- YT link
     color: "#FF0000",
@@ -44,7 +44,7 @@ const socialLinks = [
     displayName: "Github",
     subText: "@ShayanAshraf", // <-- apna GitHub username
     icon: Github,
-    url: "https://github.com/ShayanAshraf", // <-- GitHub link
+    url: "https://github.com/Shayan48", // <-- GitHub link
     color: "#ffffff",
     gradient: "from-[#333] to-[#24292e]",
   },

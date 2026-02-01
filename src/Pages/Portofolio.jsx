@@ -15,6 +15,12 @@ import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
 import { Code, Award, Boxes } from "lucide-react";
 
+const certificateFiles = [
+  "AI_certi.PNG",
+  "django_cert.png",
+  "edu_certi.PNG",
+];
+
 const ToggleButton = ({ onClick, isShowingMore }) => (
   <button
     onClick={onClick}
@@ -240,22 +246,23 @@ export default function FullWidthTabs() {
             )}
           </TabPanel>
 
-          <TabPanel value={value} index={1} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
-                {displayedCertificates.map((certificate, index) => (
-                  <div key={certificate.id || index} data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"} data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}>
-                    <Certificate ImgSertif={certificate.Img} />
+             {/* ✅ CERTIFICATES TAB (UPDATED ONLY HERE) */}
+          <TabPanel value={value} index={1}>
+            <div className="grid md:grid-cols-3 gap-5">
+              {certificateFiles.map((file, index) => {
+                const { data } = supabase.storage
+                  .from("certificates")
+                  .getPublicUrl(file);
+
+                return (
+                  <div key={index}>
+                    <Certificate ImgSertif={data.publicUrl} />
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-            {certificates.length > initialItems && (
-              <div className="mt-6 w-full flex justify-start">
-                <ToggleButton onClick={() => toggleShowMore("certificates")} isShowingMore={showAllCertificates} />
-              </div>
-            )}
           </TabPanel>
+
 
           <TabPanel value={value} index={2} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">

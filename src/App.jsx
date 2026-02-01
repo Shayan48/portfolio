@@ -21,7 +21,7 @@ const Footer = () => (
       <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
         © 2025{" "}
         <a
-          href="https://www.linkedin.com/in/shayan-ashraf-314b191b2"
+          href="www.linkedin.com/in/shayanashraf"
           className="hover:underline"
           target="_blank"
           rel="noopener noreferrer"

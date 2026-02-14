@@ -4,8 +4,11 @@ import Certificate from "./Certificate";
 
 const certificateFiles = [
   "AI_certi.PNG",
-  "django_cert.png",
   "edu_certi.PNG",
+  "django_cert.png",
+  "edu_lvl2.png",
+  "gemini_edu.png",
+  "gemini_faculty.png",
 ];
 
 const CertificatesList = () => {
